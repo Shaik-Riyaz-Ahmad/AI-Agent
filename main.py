@@ -8,11 +8,12 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain.agents import create_tool_calling_agent, AgentExecutor
-from tools import search_tool, wiki_tool, save_tool
+from tools.save_to_txt import save_tool
+from tools.search_tool import search_tool
+from tools.wiki import wiki_tool
 
 # Load .env and set API key
 load_dotenv()
-os.environ["GOOGLE_API_KEY"] = "None"
 
 # Define response model
 class ResearchResponse(BaseModel):
