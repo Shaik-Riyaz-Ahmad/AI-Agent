@@ -12,7 +12,7 @@ from tools import search_tool, wiki_tool, save_tool
 
 # Load .env and set API key
 load_dotenv()
-os.environ["GOOGLE_API_KEY"] = "AIzaSyB2j9oR7MKB1GI12bNo4Oklze3rAi1oWco"
+os.environ["GOOGLE_API_KEY"] = "None"
 
 # Define response model
 class ResearchResponse(BaseModel):
